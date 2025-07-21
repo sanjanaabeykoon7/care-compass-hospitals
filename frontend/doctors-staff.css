@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+header {
+    background-color: #004aad;
+    color: white;
+    padding: 1px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-family: 'Segoe UI';
+    font-weight:400;
+}
+
+header .logo .second-line {
+    font-size: 1rem;
+    font-family: 'Times New Roman';
+    text-align: center;
+    display: block;
+    margin-top: -22px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    margin-left: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: #00337f;
+    border-radius: 5px;
+}
+
+.emergency-btn {
+    background-color: #f4f4f4;
+    color: red;
+    text-decoration: none;
+    padding: 0px 5px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 23px;
+    cursor: default;
+    margin-right: 40px;    
+}
+
+/* Doctors & Staff Section */
+#doctors-staff {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#doctors-staff h2 {
+    font-size: 2rem;
+    margin-bottom: -5px;
+}
+
+.search-container {
+    margin: 20px auto;
+}
+
+#search-bar {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Staff List */
+.doctors-staff-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.doctor-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: scale(1.05);
+}
+
+.doctor-card h3 {
+    font-size: 22px;
+    margin-top: 0;
+    color: #007bff;
+}
+
+.doctor-card p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #002b4c;
+    color: #ffffff;
+    padding: 2rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo1 {
+    font-size: 1.5rem;
+    font-family: 'Segoe UI';
+    font-weight:400;
+}
+
+.logo1 .second-line {
+    font-size: 1rem;
+    font-family: 'Times New Roman';
+    text-align: center;
+    display: block;
+    margin-top: -21px;
+    margin-left: -48px;
+}
+
+.footer-description {
+    flex: 1 1 325px;
+    margin: 1rem;
+}
+
+.footer-description img {
+    width: 19px;
+    height: 19px;
+    vertical-align: middle;
+}
+
+.footer-network,
+.footer-quick-contacts,
+.footer-social,
+.footer-bottom {
+    flex: 1 1 200px;
+    margin: 1rem;
+}
+
+.footer-description p,
+.footer-quick-contacts p,
+.footer-quick-contacts .emergency {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Segoe UI' !important;
+    margin-top: 25px;
+}
+
+.footer-quick-contacts .emergency {
+    font-weight: 700;
+}
+
+.footer-quick-contacts .hotline {
+    color:red;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Segoe UI' !important;
+    margin-top: -15px;
+}
+
+.footer-description a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.footer-description a:hover {
+    color: #47ccc8;
+}
+
+.footer-network h3,
+.footer-quick-contacts h3,
+.footer-social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.footer-network ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.footer-network li {
+    margin-bottom: 0.5rem;
+    font-family: 'Segoe UI' !important;
+    transition: color 0.3s ease;
+}
+
+.footer-network li:hover {
+    color: #47ccc8;
+}
+
+.footer-social .social-icons a {
+    display: inline-block;
+}
+
+.footer-social .social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-bottom p {
+    color: #ffffff;
+}

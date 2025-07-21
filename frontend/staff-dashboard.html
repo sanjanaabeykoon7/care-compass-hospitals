@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="staff-dashboard.css">
+    <script src="staff-dashboard.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Staff Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#patients">Manage Patients</a></li>
+                <li><a href="#appointments">Manage Appointments</a></li>
+                <li><a href="#medical-records">Medical Records</a></li>
+                <li><a href="#lab-results">Lab Results</a></li>
+                <li><a href="#doctorsStaff">Doctors & Staff</a></li>
+                <li><button id="logoutButton" class="logout">Logout</button></li>
+                <li><a href="#feedbacks">Feedbacks/Queries</a></li>
+                <li><a href="#payments">Payments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="patients">
+            <h2>Manage Patients</h2>
+            <table id="patientTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="appointments">
+            <h2>Manage Appointments</h2>
+            <table id="appointmentTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Patient</th>
+                        <th>Doctor</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="appointments-table-body">
+                    <!-- Populated dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="medical-records">
+            <h2>Medical Records</h2>
+            <button id="addRecordButton">Add Record</button>
+            <table id="recordTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Patient</th>
+                        <th>Notes</th>
+                        <th>Prescriptions</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="lab-results">
+            <h2>Lab Results</h2>
+            <button id="uploadReportButton">Upload Report</button>
+            <table id="labResultTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Patient</th>
+                        <th>Test Name</th>
+                        <th>Test Date</th>
+                        <th>Result</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="doctorsStaff">
+            <h2>Manage Doctors & Staff</h2>
+            <button id="addDoctorStaffButton">Add Doctor/Staff</button>
+            <table id="doctorsStaffTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Specialty</th>
+                        <th>Qualifications</th>
+                        <th>Contact</th>
+                        <th>Available Days</th>
+                        <th>Available Hours</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated dynamically -->
+                </tbody>
+            </table>
+        </section>        
+
+        <section id="feedbacks">
+            <h2>Manage Feedbacks/Queries</h2>
+            <table id="feedbacksTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact No</th>
+                        <th>Department</th>
+                        <th>Message</th>
+                        <th>Submitted At</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="payments">
+            <h2>Manage Payments</h2>
+            <table id="paymentsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Branch of the Hospital</th>
+                        <th>Payment Category</th>
+                        <th>Invoice No</th>
+                        <th>Patient Name</th>
+                        <th>Amount</th>
+                        <th>Payed At</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

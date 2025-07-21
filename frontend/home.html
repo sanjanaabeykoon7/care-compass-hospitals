@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Care Compass Hospitals</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo" style="margin-top: -1px;"><img src="assets/icon/logo1.png" alt="logo" style="width: 50px; height: 50px; margin-top: 3px; vertical-align:top;"> Care Compass Hospitals<br><span class="second-line">LIVE MORE</span></div>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="doctors-staff.html">Doctors & Staff</a></li>
+                <li><a href="patient-portal.html">Patient Portal</a></li>
+                <li><a href="payments.html">Online Payments</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="emergency-btn"><img src="assets/icon/call.png" alt="call icon" style="width: 26px; height: 26px; vertical-align:sub;"> 1212</a>
+        <!-- Sign In button -->
+        <div class="dropdown">
+            <button class="profile-btn" id="signInButton">
+            </button>
+            <div class="dropdown-menu" id="signInMenu" aria-labelledby="signInButton" style="transition: opacity 0.3s ease-in-out;">
+                <p class="text-center">Admin and Staff Only</p>
+                <form id="loginForm" class="text-center">
+                    <input type="email" name="email" placeholder="Email" required />
+                    <input type="password" name="password" placeholder="Password" required />
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Content -->
+    <main>
+        <section class="intro">
+            <h1>Welcome to Care Compass Hospitals</h1>
+            <p>Your health, our priority. Discover world-class medical services tailored for you.</p>
+            <a href="patient-portal.html" class="cta-btn">Book an Appointment</a>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Care Compass Hospitals is a leading healthcare provider, dedicated to offering state-of-the-art medical services with compassion and professionalism. We operate in multiple locations including Colombo, Kandy and Kurunegala, ensuring accessibility and convenience for all our patients.</p>
+
+            <h3>Our Mission</h3>
+            <p>To provide top-quality healthcare with integrity, excellence, and innovation.</p>
+
+            <h4>Our Vision</h4>
+            <p>To be the most trusted and respected healthcare network, improving the lives of our patients and the community.</p>
+
+            <h5>Core Values</h5>
+            <ul>
+                <li>Compassion</li>
+                <li>Excellence</li>
+                <li>Integrity</li>
+                <li>Innovation</li>
+                <li>Collaboration</li>
+            </ul>
+        </section>
+
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <p>Explore a wide range of healthcare services designed to meet all your medical needs.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>General Medicine</h3>
+                    <p>Comprehensive medical care for individuals and families.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Pediatrics</h3>
+                    <p>Expert care for infants, children, and adolescents.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Surgical Services</h3>
+                    <p>State-of-the-art surgical procedures with minimal recovery time.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Diagnostic Services</h3>
+                    <p>Advanced diagnostic tools for accurate and timely results.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-description">
+                <div class="logo1" style="margin-top: -1px;"><img src="assets/icon/logo2.png" alt="logo" style="width: 50px; height: 50px; margin-top: 3px; vertical-align:top;"> Care Compass Hospitals<br><span class="second-line">LIVE MORE</span></div>
+                <p>Care Compass Hospitals stands as Sri Lanka's premier private healthcare provider, with International Accreditation in Patient Safety and Care. Our dedication to compassionate patient care, cutting-edge innovation and exceptional patient outcomes has earned us the esteemed trust of our community.</p>
+                <a href="contact.html">Contact us <img src="assets/icon/arrow1.png" alt="Contact Us"></a>
+            </div>
+            <div class="footer-network">
+                <h3>Care Compass Network</h3>
+                <ul>
+                    <li>Care Compass Hospitals Colombo: +94-123-456-7890</li>
+                    <li>Care Compass Hospitals Kandy: +94-123-456-7891</li>
+                    <li>Care Compass Hospitals Kurunegala: +94-123-456-7892</li>
+                </ul>
+            </div>
+                        
+            <div class="footer-quick-contacts">
+                <h3>Emergency Contact</h3>
+                <p>For immediate assistance, please contact us for medical support without hesitation.</p>
+                <p class="emergency">24/7 Emergency</p>
+                <p class="hotline">Hotline: 1212</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us On</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="assets/icon/f.png" alt="Facebook"></a>
+                    <a href="#"><img src="assets/icon/l.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="assets/icon/x.png" alt="X"></a>
+                    <a href="#"><img src="assets/icon/i.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;</p>
+                <p style="font-family: 'Segoe UI' !important; font-size: 9px; letter-spacing: 0.1px; color: aqua; margin-top: -15px; margin-bottom: -25px;">Solution by Sanjana Abeykoon</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
