@@ -1,112 +1,117 @@
 # Care Compass Hospitals
 
-A modern hospital management system designed to enhance efficiency, security, and patient engagement across healthcare services.
+A comprehensive web application for hospital management, designed to streamline patient care, administrative tasks, and staff operations. This system includes a patient portal for appointments, medical records, and payments, alongside dedicated dashboards for admins and staff to manage users, records, and feedback.
 
----
+This project was developed for educational purposes as part of a Web Application Development demonstration.
 
-## Project Overview
+## Table of Contents
 
-**Care Compass Hospitals** is a comprehensive, user-friendly web application that streamlines hospital operations through secure login systems, real-time appointment scheduling, dynamic staff directories, and effective communication tools. It supports three user types—Patients, Staff, and Administrators—each with tailored access and controls.
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [License](#license)
 
----
+## Features
 
-## Core Features
-
-- **Role-Based Authentication** (Admin, Staff, Patient)
-- **Appointment Scheduling & Management**
-- **Doctors & Staff Directory** (Admin-controlled, searchable)
-- **Medical Records & Lab Results** (View, upload, and manage)
-- **Feedback & Query Submission** (Department-based contact form)
-- **Admin Dashboard** (Manage users, appointments, and records)
-- **Real-Time Data Display** and Update
-
----
+- **Patient Portal**: Allows patients to register, log in, schedule appointments, view medical records, lab results, and make online payments.
+- **Admin Dashboard**: Comprehensive management tools for admins to handle users (admin/staff/patients), appointments, medical records, lab results, doctors/staff profiles, feedback/queries, and payments.
+- **Staff Dashboard**: Restricted access for staff to manage patients, appointments, records, results, profiles, feedback, and payments.
+- **Doctors & Staff Profiles**: Display and manage profiles with details like specialties, qualifications, and availability.
+- **Feedback & Queries**: Submission and management of user feedback or inquiries.
+- **Online Payments**: Secure handling of payments with invoice tracking.
+- **Secure Authentication**: User registration, login, and session management with password hashing.
+- **Database Integration**: MySQL backend for storing user data, appointments, records, and more.
+- **Responsive Design**: Mobile-friendly interfaces using CSS media queries.
 
 ## Technologies Used
 
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Backend:** PHP (Plain PHP)
-- **Database:** MySQL
-- **Version Control:** Git & GitHub
+- **Frontend**: HTML, CSS, JavaScript (ES6+)
+- **Backend**: PHP (with MySQLi for database interactions)
+- **Database**: MySQL
+- **Security**: Password hashing with BCRYPT, input validation, and prepared statements to prevent SQL injection.
+- **Tools**: Local server (e.g., XAMPP/WAMP), Git for version control.
 
----
+No external frameworks or libraries are used (As per the assignment requirements).
 
-## Project Structure
+## Installation
 
-```bash
-care_compass_hospitals/
-├── frontend/
-│   ├── assets/
-│   ├── admin-dashboard.html
-│   ├── admin-dashboard.css
-│   ├── admin-dashboard.js
-│   └── ...
-├── backend/
-│   ├── config/
-│   ├── routes/
-└── README.md
+### Prerequisites
+- PHP 7+ installed
+- MySQL database server (e.g., via XAMPP, MAMP, or WAMP)
+- Web browser (Chrome, Firefox, etc.)
+- Git (optional, for cloning the repository)
 
-```
----
+### Steps
+1. **Clone the Repository**:
+   ```
+   git clone https://github.com/sanjanaabeykoon7/care-compass-hospitals.git
+   cd care-compass-hospitals
+   ```
 
-## Testing Highlights
+2. **Set Up the Database**:
+   - Create a new MySQL database named `care_compass`.
+   - Import the schema (create tables manually based on backend routes or use the provided SQL dump if available). Key tables include:
+     - `users` (patients): id, full_name, email, password
+     - `admin_staff`: id, full_name, email, password, role
+     - `appointments`: id, patient_id, doctor, date, time
+     - `medical_records`: id, patient_id, notes, prescriptions
+     - `lab_results`: id, patient_id, test_name, test_date, result
+     - `doctors_staff`: id, name, specialty, qualifications, contact, available_days, available_hours
+     - `feedback_queries`: id, name, email, contact_number, department, message, submitted_at
+     - `payments`: id, hospital, payment_category, invoice_no, patient_name, amount, payed_at
+   - Update database credentials in `backend/config/db.php` if needed (default: localhost, root, no password).
 
-This project was rigorously tested using various strategies to ensure functionality and reliability:
+3. **Start the Server**:
+   - Use XAMPP/WAMP to start Apache and MySQL.
+   - Place the project in the server's root directory (e.g., `htdocs` for XAMPP).
 
-- **Unit Testing** for backend PHP logic
-- **UI/UX Testing** for all pages
-- **Acceptance Testing** from end-user perspective
-- **Risk Assessment** and bug tracking
-- **Database Validation** and security tests
-- **User Feedback Evaluation** and improvement
+4. **Verify Setup**:
+   - Access `http://localhost/care-compass-hospitals/frontend/home.html` in your browser.
 
-📄 _Full test plan and cases documented with evidence of results._
+## Usage
 
----
+- **Patient Access**:
+  - Navigate to `patient-portal.html` to log in or sign up.
+  - Schedule appointments, view records, and manage payments via `portal-dashboard.html`.
 
-## Sample Test Cases
+- **Admin/Staff Access**:
+  - Log in via `home.html` (profile icon - admin login route).
+  - Admins use `admin-dashboard.html`; staff use `staff-dashboard.html`.
+  - Manage all aspects through interactive tables and buttons.
 
-| Test ID | Feature             | Expected Outcome                     | Status |
-|--------:|---------------------|--------------------------------------|--------|
-| TC001   | Patient Login       | Successful login with valid creds    | Pass |
-| TC007   | Doctor Directory    | Filters by specialty                 | Pass |
-| TC012   | Feedback Submission | Stores form data in database         | Pass |
-| TC020   | Admin Delete User   | User removed and interface updated   | Pass |
+- **API Endpoints**:
+  - Backend routes handle CRUD operations (e.g., `/backend/routes/schedule_appointment.php` for POST requests).
+  - Use tools like Postman for testing APIs.
 
----
+- **Logout**:
+  - Click the logout button on dashboards to destroy the session.
+
+Ensure sessions are enabled in PHP for authentication.
 
 ## Screenshots
 
-![Home](/frontend/assets/icon/welcome.png)
-![About](/frontend/assets/icon/about1.png)
-![Services](/frontend/assets/icon/services1.png)
-![Footer](/frontend/assets/icon/footer.png)
-![Doctor & Staff Profiles](/frontend/assets/icon/profiles.png)
-![Patient Login](/frontend/assets/icon/login.png)
-![Patient Register](/frontend/assets/icon/register.png)
-![Appointments Page](/frontend/assets/icon/appointments.png)
-![Medical Records Page](/frontend/assets/icon/records.png)
-![Lab Results Page](/frontend/assets/icon/labresults.png)
-![Payments Page 1](/frontend/assets/icon/pay1.png)
-![Payments Page 2](/frontend/assets/icon/pay2.png)
-![Contact Us](/frontend/assets/icon/contact.png)
-![Feedbacks](/frontend/assets/icon/feedback1.png)
-![Admin Dashboard](/frontend/assets/icon/admin.png)
-![Staff Dashboard](/frontend/assets/icon/staff.png)
-![Database](/frontend/assets/icon/db.png)
-
----
-
-## Developer Info
-
-**Name:** Sanjana Abeykoon  
-**Email:** [sanjanaabeykoon1@gmail.com]  
-**LinkedIn:** [www.linkedin.com/in/sanjana-abeykoon]
-
----
+![Home](frontend/assets/icon/welcome.png)
+![About](frontend/assets/icon/about1.png)
+![Services](frontend/assets/icon/services1.png)
+![Footer](frontend/assets/icon/footer.png)
+![Doctor & Staff Profiles](frontend/assets/icon/profiles.png)
+![Patient Login](frontend/assets/icon/login.png)
+![Patient Register](frontend/assets/icon/register.png)
+![Appointments Page](frontend/assets/icon/appointments.png)
+![Medical Records Page](frontend/assets/icon/records.png)
+![Lab Results Page](frontend/assets/icon/labresults.png)
+![Payments Page 1](frontend/assets/icon/pay1.png)
+![Payments Page 2](frontend/assets/icon/pay2.png)
+![Contact Us](frontend/assets/icon/contact.png)
+![Feedbacks](frontend/assets/icon/feedback1.png)
+![Admin Dashboard](frontend/assets/icon/admin.png)
+![Staff Dashboard](frontend/assets/icon/staff.png)
+![Database](frontend/assets/icon/db.png)
 
 ## License
 
-This project is developed for educational purposes as part of Web Appliaction Development demonstration.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. Developed for educational purposes only.
 
 ---
